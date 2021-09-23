@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreAnywhere</title>
+</head>
+<body>
+    <div class="flex-column flex_items-center container bordered">
+        <h1 >Store Anywhere</h1>
+        <div class="flex-row justify_content-center w-100p">
+            <section class="flex_basis-50 bordered m-2 p-2 odd">
+                <h3>Rest api will be used?</h3>
+                <p>No external restful apis will be used as we will create our own.</p>
+                <h3>User's auth collected data will be as follows:</h3>
+                <ul>
+                    <li>username/password</li>
+                    <li>email (to verify the registration)</li>
+                </ul>
+                <h3>The most valuable tables/fields in the db would be as follows: </h3>
+                <ul>
+                    <li>Users -> id, username, password, email</li>
+                    <li>Tokens -> all fields for the auth based actions</li>
+                    <li>User's Data Tables -> user_id, corresponding_table_id </li>
+                </ul>
+            </section>
+            <section class="flex_basis-50 bordered m-2 p-2 even">
+                <h3>People  to target:</h3>
+                <ul>
+                    <li>middle business owners/product managers</li>
+                    <li>starter business owners/product managers</li>
+                    <li>independent individuals who might want to sell their products in any form</li>
+                </ul>
+                <h3>Site Goals</h3>
+                <ul>
+                    <li>Provide elegant and easy-to-use way to upload/update/get user's products/items/goods</li>
+                    <li>Implement easy-to-understand UX and UI</li>
+                    <li>Create an additional API layer for the other programmers to give them the opportunity to pull/update the specific user's data</li>
+                </ul>
+                <h3>Why?</h3>
+                <p>Because it will give opportunity to those people who want to extend their business further...</p>
+            </section>
+        </div>
+        <footer class="flex-row justify_content-center w-100p">
+            <section class="flex_basis-30 p-2 m-2 bordered odd">
+                <h3>Resource Links:</h3>
+                <ul>
+                    <li><a href="https://www.pinterest.com/pin/519813982000797394/" target="_blank">design #1</a></li>
+                    <li><a href="https://www.pinterest.com/pin/472174342191487567/" target="_blank">design #2</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">security link #1</a></li>
+                </ul>
+            </section>
+            <section class="flex_basis-30 p-2 m-2 bordered even">
+                <h3>Q & Concerns</h3>
+                <ul>
+                    <li>How to process input excel/csv/other files from user in a way that it would be well-structured in db?</li>
+                    <li>Design(UX/UI) of the whole app & which api endpoints to provide for the programmers?</li>
+                    <li>Existance of some script that will provide all functionality and interactions through some modal/window as it is implemented at the other services?</li>
+                </ul>
+            </section>
+            <section class="flex_basis-30 p-2 m-2 bordered odd">
+                <h3>Accessibility </h3>
+                <ul>
+                    <li>Eng/Rus language switch</li>
+                    <li>Light loading mode for low speed internet.</li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+
+    <style>
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .bordered {
+            border: 1px solid black;
+        }
+        .w-100p {
+            width: 100%;
+        }
+        .w-95p {
+            width: 95%;
+        }
+        .w-33p {
+            width: 33%;
+        }
+        .w-45p {
+            width: 45%;
+        }
+        .w-45 {
+            width: 45vw;
+        }
+        .w-20 {
+            width: 20vw;
+        }
+        .p-2 {
+            padding: 15px;
+        }
+        .p-1 {
+            padding: 5px;
+        }
+        .m-2 {
+            margin: 15px;
+        }
+        .m-1 {
+            margin: 5px;
+        }
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex_items-center {
+            align-items: center;
+        }
+        .flex_self-center {
+            align-self: center;
+        }
+
+        .justify_content-center {
+            justify-content: center;
+        }
+        .flex_basis-50 {
+            flex-basis: 50%;
+        }
+        .flex_basis-30 {
+            flex-basis: 30%;
+        }
+
+        /* Media and other queries + animations */
+
+        @media screen and (max-width: 1000px) {
+            .flex-row {
+                flex-direction: column;
+            }
+
+            p, li {
+                font-size: 0.8rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        @keyframes floating_animation {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        section {
+            transition: all 0.3s ease-in-out;
+            cursor: url('cursor.cur'), auto;
+        }
+
+        section:hover {
+            /* shadow  */
+            box-shadow: 0px 20px 21px -20px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 20px 21px -20px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 20px 21px -20px rgba(0,0,0,0.75);
+            /* transform */
+            transform: translateY(-7px);
+        }
+
+        section.even {
+            /* animation: floating_animation 1.8s ease-out 0s infinite; */
+        }
+
+        section.odd {
+            /* animation: floating_animation 1.8s ease-out 0.9s infinite; */
+        }
+
+        p {
+            text-decoration: underline;
+        }
+
+        /* text */
+        p, li {
+            font-weight: 300;
+        }
+
+        ul li {
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>
