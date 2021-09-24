@@ -4,70 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoreAnywhere</title>
-</head>
-<body>
-    <div class="flex-column flex_items-center container bordered">
-        <h1 >Store Anywhere</h1>
-        <div class="flex-row justify_content-center w-100p">
-            <section class="flex_basis-50 bordered m-2 p-2 odd">
-                <h3>Rest api will be used?</h3>
-                <p>No external restful apis will be used as we will create our own.</p>
-                <h3>User's auth collected data will be as follows:</h3>
-                <ul>
-                    <li>username/password</li>
-                    <li>email (to verify the registration)</li>
-                </ul>
-                <h3>The most valuable tables/fields in the db would be as follows: </h3>
-                <ul>
-                    <li>Users -> id, username, password, email</li>
-                    <li>Tokens -> all fields for the auth based actions</li>
-                    <li>User's Data Tables -> user_id, corresponding_table_id </li>
-                </ul>
-            </section>
-            <section class="flex_basis-50 bordered m-2 p-2 even">
-                <h3>People  to target:</h3>
-                <ul>
-                    <li>middle business owners/product managers</li>
-                    <li>starter business owners/product managers</li>
-                    <li>independent individuals who might want to sell their products in any form</li>
-                </ul>
-                <h3>Site Goals</h3>
-                <ul>
-                    <li>Provide elegant and easy-to-use way to upload/update/get user's products/items/goods</li>
-                    <li>Implement easy-to-understand UX and UI</li>
-                    <li>Create an additional API layer for the other programmers to give them the opportunity to pull/update the specific user's data</li>
-                </ul>
-                <h3>Why?</h3>
-                <p>Because it will give opportunity to those people who want to extend their business further...</p>
-            </section>
-        </div>
-        <footer class="flex-row justify_content-center w-100p">
-            <section class="flex_basis-30 p-2 m-2 bordered odd">
-                <h3>Resource Links:</h3>
-                <ul>
-                    <li><a href="https://www.pinterest.com/pin/519813982000797394/" target="_blank">design #1</a></li>
-                    <li><a href="https://www.pinterest.com/pin/472174342191487567/" target="_blank">design #2</a></li>
-                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">security link #1</a></li>
-                </ul>
-            </section>
-            <section class="flex_basis-30 p-2 m-2 bordered even">
-                <h3>Q & Concerns</h3>
-                <ul>
-                    <li>How to process input excel/csv/other files from user in a way that it would be well-structured in db?</li>
-                    <li>Design(UX/UI) of the whole app & which api endpoints to provide for the programmers?</li>
-                    <li>Existance of some script that will provide all functionality and interactions through some modal/window as it is implemented at the other services?</li>
-                </ul>
-            </section>
-            <section class="flex_basis-30 p-2 m-2 bordered odd">
-                <h3>Accessibility </h3>
-                <ul>
-                    <li>Eng/Rus language switch</li>
-                    <li>Light loading mode for low speed internet.</li>
-                </ul>
-            </section>
-        </footer>
-    </div>
+    <title>Mini Auction Game</title>
 
     <style>
         .container {
@@ -199,5 +136,63 @@
             margin-top: 10px;
         }
     </style>
+</head>
+<body>
+    <div class="flex-column flex_items-center container bordered">
+        <h1 >Mini Auction Game</h1>
+        <div class="flex-row justify_content-center w-100p">
+            <section class="flex_basis-50 bordered m-2 p-2 odd">
+                <h3>Rest api will be used?</h3>
+                <p>Battle.net api will possibly be used along with the other alike apis that will provide items data.</p>
+                <h3>User's auth collected data will be as follows:</h3>
+                <ul>
+                    <li>username/password</li>
+                    <li>email (to verify the registration)</li>
+                </ul>
+                <h3>The most valuable tables/fields in the db would be as follows: </h3>
+                <ul>
+                    <li>Users -> id, username, password, email</li>
+                    <li>Tokens -> all fields for the auth based actions</li>
+                    <li>Items -> user_id, ...data_related_fields.</li>
+                </ul>
+            </section>
+            <section class="flex_basis-50 bordered m-2 p-2 even">
+                <h3>People  to target:</h3>
+                <ul>
+                    <li>People who like to sell/buy items</li>
+                </ul>
+                <h3>Site Goals</h3>
+                <ul>
+                    <li>Provide elegant and pleasant way to play the game and interact with their items in either selling/buying them</li>
+                    <li>Implement easy-to-understand UX and UI</li>
+                </ul>
+                <h3>Why?</h3>
+                <p>Because it will be entertaining and interesting thing to create.</p>
+            </section>
+        </div>
+        <footer class="flex-row justify_content-center w-100p">
+            <section class="flex_basis-30 p-2 m-2 bordered odd">
+                <h3>Resource Links:</h3>
+                <ul>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">security link #1</a></li>
+                </ul>
+            </section>
+            <section class="flex_basis-30 p-2 m-2 bordered even">
+                <h3>Q & Concerns</h3>
+                <ul>
+                    <li>Process of generating items, buying them, selling them?</li>
+                    <li>Which way to display the auction?</li>
+                    <li>Live updates or regular 1-10mins?</li>
+                </ul>
+            </section>
+            <section class="flex_basis-30 p-2 m-2 bordered odd">
+                <h3>Accessibility </h3>
+                <ul>
+                    <li>Eng/Rus language switch.</li>
+                    <li>Responsiveness for all target devices.</li>
+                </ul>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>
